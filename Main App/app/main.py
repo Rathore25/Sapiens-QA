@@ -46,13 +46,14 @@ cdqa_pipeline = QAPipeline(reader='./bert_qa.joblib')
 cdqa_pipeline.fit_retriever(df=df)
 cdqa_pipeline.fit_reader('./sapiens_annotated.json')
 
-# Use the pretrained annotated distilbert file
-#wget.download(url='https://github.com/Rathore25/SapiensAI/raw/main/Pretrained Data/sapiens_distilbert.joblib', out='./')
+# Use the pretrained annotated Distilbert file
+#wget.download(url='https://github.com/Rathore25/Sapiens-QA/raw/main/Pretrained Data/sapiens_distilbert.joblib', out='./')
 #cdqa_pipeline = QAPipeline(reader='./sapiens_distilbert.joblib')
 #cdqa_pipeline.fit_retriever(df=df)
 
-# On local server
-#cdqa_pipeline = QAPipeline(reader='./sapiens_distilbert.joblib')
+# Use the pretrained annotated Bert file
+#wget.download(url='https://github.com/Rathore25/Sapiens-QA/raw/main/Pretrained Data/sapiens_bert.joblib', out='./')
+#cdqa_pipeline = QAPipeline(reader='./sapiens_bert.joblib')
 #cdqa_pipeline.fit_retriever(df=df)
 
 @app.route("/api", methods=["GET"])
